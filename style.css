@@ -5,9 +5,9 @@
 }
 .main-page{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   min-height:100vh;
 }
 .grid-container{
@@ -18,11 +18,8 @@
 }
 
 .gridUnit{
-  height: 20px;
-  width: 20px;
   border-style: solid;
   background-color: white;
-
 }
 
 /* .gridpart:hover{

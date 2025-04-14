@@ -1,6 +1,8 @@
 const container = document.querySelector("#container")
 const btn = document.querySelector("button");
-
+const CONTAINER_WIDTH = 960;
+container.style.width = CONTAINER_WIDTH + 'px';
+container.style.height = CONTAINER_WIDTH + 'px';
 function createGrid(grid_size) {
   for(let i=0; i<grid_size*grid_size; i++){
     const gridUnit = document.createElement("div");
@@ -11,6 +13,8 @@ function createGrid(grid_size) {
   const gridMatrix = document.querySelectorAll("#gridUnit")
   console.log(gridMatrix);
   gridMatrix.forEach((gridUnit) => {
+    gridUnit.style.width = Math.floor(CONTAINER_WIDTH/grid_size) + 'px';
+    gridUnit.style.height = Math.floor(CONTAINER_WIDTH/grid_size) + 'px';
     gridUnit.addEventListener("mouseenter", (e) => {
       e.target.style["background-color"] = "gray";
     })
@@ -24,6 +28,9 @@ function deleteGrid(){
   })
 }
 
+
+
+// 
 const errorMsg = document.createElement("div");
 container.appendChild(errorMsg);
 
@@ -32,7 +39,6 @@ btn.addEventListener("click", (e) => {
   deleteGrid();
   if(answer>100){
     errorMsg.textContent = "Choose a smaller number. No greater than 100.";
-    
   }
   else{
     errorMsg.textContent = "";
@@ -40,3 +46,5 @@ btn.addEventListener("click", (e) => {
   }
   
 })
+
+console.log(container.style.width);
