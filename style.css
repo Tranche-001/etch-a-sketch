@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mainPage{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gridUnit{
+  width: 20px;
+  height: 20px;
+  border-style: solid;
+  background-color: white;
+
+}
+
+/* .gridpart:hover{
+  background-color: gray;
+} */
