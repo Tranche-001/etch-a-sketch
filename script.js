@@ -24,13 +24,19 @@ function deleteGrid(){
   })
 }
 
-
+const errorMsg = document.createElement("div");
+container.appendChild(errorMsg);
 
 btn.addEventListener("click", (e) => {
   let answer = prompt("Choose a number of squares per side")
   deleteGrid();
   if(answer>100){
+    errorMsg.textContent = "Choose a smaller number. No greater than 100.";
     
   }
-  createGrid(answer);
+  else{
+    errorMsg.textContent = "";
+    createGrid(answer);
+  }
+  
 })
