@@ -1,6 +1,6 @@
 const container = document.querySelector("#container")
 const btn = document.querySelector("button");
-const CONTAINER_WIDTH = 960;
+const CONTAINER_WIDTH = 640;
 container.style.width = CONTAINER_WIDTH + 'px';
 container.style.height = CONTAINER_WIDTH + 'px';
 function createGrid(grid_size) {
@@ -13,8 +13,8 @@ function createGrid(grid_size) {
   const gridMatrix = document.querySelectorAll("#gridUnit")
   console.log(gridMatrix);
   gridMatrix.forEach((gridUnit) => {
-    gridUnit.style.width = Math.floor(CONTAINER_WIDTH/grid_size) + 'px';
-    gridUnit.style.height = Math.floor(CONTAINER_WIDTH/grid_size) + 'px';
+    gridUnit.style.width = CONTAINER_WIDTH/grid_size + 'px';
+    gridUnit.style.height = CONTAINER_WIDTH/grid_size + 'px';
     gridUnit.addEventListener("mouseenter", (e) => {
       e.target.style["background-color"] = "gray";
     })
