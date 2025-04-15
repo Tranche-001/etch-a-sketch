@@ -15,12 +15,15 @@
   justify-content:center;
   align-items: center;
   flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 .grid-container{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   border-style:solid;
+  border-radius: 10px;
   border-width: 10px;
 }
 
